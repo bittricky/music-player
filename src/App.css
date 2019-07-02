@@ -1,33 +1,112 @@
-.App {
+:root {
+  --green: #84bd00;
+  --black: #000000;
+  --grey: #828282;
+  --sand: #ecebe8;
+  --white: #ffffff;
+}
+
+.music{
+  position: relative;
+}
+
+.search div, .search input {
+  width: 100%;
+}
+
+.search input {
+  border: none;
+  border-bottom: 2px solid var(--green);
+  outline: none;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+}
+
+.details h3{
   text-align: center;
+  padding: 50px 10px;
+  margin: 0;
+  color: var(--green);
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.player{
+  text-align: center;
+  margin-top: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.player div{
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.player .player__backward button,
+.player .player__forward button{
+  background: transparent;
+  border: 1px solid var(--green);
+  color: var(--green);
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  font-size: 35px;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.player .player__backward button{
+  border-left: none;
+}
+
+.player .player__forward button{
+  border-right: none;
+}
+
+.player .player__main button:hover,
+.player .player__backward button:hover,
+.player .player__forward button:hover{
+  color: var(--green));
+  border: 1px solid var(--green);
+}
+
+.player .player__main {
+  border: 1px solid var(--green);
+}
+
+.player .player__main button {
+  color: var(--green);
+  background: transparent;
+  width: 75px;
+  height: 75px;
+  border: none;
+  font-size: 35px;
+  outline: none;
+}
+
+.progress{
+  text-align: center;
+  margin-top: 100px;
+    color: var(--white);
+}
+
+.progress progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+   appearance: none;
+
+  width: 390px;
+  height: 20px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.progress progress[value]::-webkit-progress-bar {
+  background-color: var(--sand);
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+.progress progress[value]::-webkit-progress-value {
+    background-color: var(--green);
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
 }
